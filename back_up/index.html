@@ -1,0 +1,16 @@
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'style.css' %}">
+
+<h1>Welcome Online</h1>
+    Your name is {{name}}<br>
+    Your age is {{age}}<br>
+    Your email is {{email}}
+
+    <h2>Enter your words:</h2>
+    <form method="POST" action="counter">
+    {% csrf_token %}
+    <textarea name="text" rows="10" cols="100"></textarea><br>
+    <input type="submit"/>
+    </form>
+
